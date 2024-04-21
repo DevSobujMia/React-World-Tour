@@ -10,6 +10,8 @@ const Country = ({ country }) => {
     setVisited(!visited);
   };
 
+  
+
   return (
     <div className="box">
       <h3>{name.common}</h3>
