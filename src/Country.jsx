@@ -1,24 +1,21 @@
 import { useState } from "react";
 
 const Country = ({ country }) => {
-  console.log(country);
-  const { name, flags, capital } = country;
+  const { name, flags, capital, continents } = country;
 
   const [visited, setVisited] = useState(false);
 
-  const handleVisited = () =>{
+  const handleVisited = () => {
     setVisited(!visited);
   };
 
-  
-
   return (
-    <div className="box">
+    <div className={`box country ${visited ? 'visited' : 'non-visited'}`}>
       <h3>{name.common}</h3>
       <img src={flags.png} alt="" />
-      <div className="boxs">
+      <div>
         <p>Capital: {capital}</p>
-        <p>Continents: {country.continents}</p>
+        {continents && <p>Continents: {country.continents}</p>}
         <button onClick={handleVisited}>{visited ? 'Visited' : 'Go..'}</button>
       </div>
     </div>

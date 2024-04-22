@@ -1,16 +1,14 @@
-import './App.css'
-import Countries from './Countries'
+import React from 'react';
+import './App.css';
+import Countries from './Countries';
 
 function App() {
-
   return (
     <>
-
-      <h1>Countries Flags</h1>
+      <h1>World Countries</h1>
       <Countries/>
-
     </>
-  )
+  );
 }
 
-export default App
+export default App;
